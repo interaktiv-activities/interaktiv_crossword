@@ -80,7 +80,7 @@ function validateAnswer() {
     var x60 = document.getElementById("item14-3").value;
 
     //CHECKS IF ACROSS 1 - LAPTOP IS CORRECT
-    if ((x1 == "L"|| x1 == "l") && (x2 == "A" || x2 == "a") && (x3 == "P" || x3 == "p") && (x4 == "T" || x4 == "t") && (x5 == "O" || x5 == "o") && (x5 == "P" || x6 == "p") &&
+    if ((x1 == "L"|| x1 == "l") && (x2 == "A" || x2 == "a") && (x3 == "P" || x3 == "p") && (x4 == "T" || x4 == "t") && (x5 == "O" || x5 == "o") && (x6 == "P" || x6 == "p") &&
     //CHECKS IF ACROSS 4 - BENILDEMAIL IS CORRECT
     (x7 == "B" || x7 == "b") && (x8 == "E" || x8 == "e") && (x9 == "N" || x9 == "n") && (x10 == "I" || x10 == "i") && (x11 == "L" || x11 == "l") && (x12 == "D" || x12 == "d") && (x13 == "E" || x13 == "e") &&
     (x14 == "M" || x14 == "m") && (x15 == "A" || x15 == "a") && (x16 == "I" || x16 == "i") && (x17 == "L" || x17 == "l") &&
