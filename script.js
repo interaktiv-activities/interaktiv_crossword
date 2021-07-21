@@ -103,7 +103,7 @@ function validateAnswer() {
     //CHECKS IF DOWN 9 - SIS IS CORRECT 
     (x59 == "S" || x59 == "s") && (x60 == "S" || x60 == "s")
     ){
-        alert("Congratulations! The secret code for the next portal is 'PASSWORD'. Go back to the portal menu and head over to your next adventure!");
+        alert("Congratulations! The secret code for the next portal is 'REQUIREMENTS'. Go back to the portal menu and head over to your next adventure!");
     } else {
         alert("Please Try Again! Seems like some of your answers are wrong.");
     };
