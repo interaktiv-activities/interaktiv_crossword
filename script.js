@@ -1,3 +1,19 @@
+//SOUNDS
+var winSound = new Audio()
+winSound.src = "SOUNDs/victory.wav"
+
+var backgroundMusic = new Audio();
+backgroundMusic.src = "SOUNDS/happy.mp3"
+
+function startGame() {
+    document.getElementById("parallax").style.display = "none"
+    document.getElementById("title").style.display = "block"
+    document.getElementById("crossword-board-container").style.display = "block"
+    document.getElementById("bottom-elements").style.display = "block"
+    backgroundMusic.play()
+    backgroundMusic.volume = 0.1
+}
+
 function validateAnswer() {
     //GETS VALUE OF ACROSS 1 - LAPTOP
     var x1 = document.getElementById("item1-2").value;
@@ -103,7 +119,12 @@ function validateAnswer() {
     //CHECKS IF DOWN 9 - SIS IS CORRECT 
     (x59 == "S" || x59 == "s") && (x60 == "S" || x60 == "s")
     ){
-        alert("Congratulations! The secret code for the next portal is 'REQUIREMENTS'. Go back to the portal menu and head over to your next adventure!");
+        backgroundMusic.volume = 0
+        winSound.play()
+        document.getElementById("title").style.display = "none"
+        document.getElementById("crossword-board-container").style.display = "none"
+        document.getElementById("bottom-elements").style.display = "none"
+        document.getElementById("overlay").style.display = "block"
     } else {
         alert("Please Try Again! Seems like some of your answers are wrong.");
     };

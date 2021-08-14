@@ -7,270 +7,297 @@
   <link href="styles.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <script defer src="script.js"></script>
+  <script defer src="animation.js"></script>
 </head>
 
-<img class="title" src="ASSETS/title-sign.png" width= 400px><img>
-</br>
+<body>
+    <section class="parallax" id="parallax">
+        <image src="ANIMATION-ELEMENTS/title-img.png" class="title-img layer" data-speed="2"></image><br>
+        <button class="start-btn layer" data-speed="2" onclick="startGame()"> START! </button>
+        <img src="ANIMATION-ELEMENTS/asset1.png" data-speed="7" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset2.png" data-speed="12" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset3.png" data-speed="-2" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset4.png" data-speed="-7" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset5.png" data-speed="8" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset6.png" data-speed="5" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset7.png" data-speed="-4" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset8.png" data-speed="-6" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset9.png" data-speed="7" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset10.png" data-speed="-5" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset11.png" data-speed="1" class="layer card" id="card">
+        <img src="ANIMATION-ELEMENTS/asset12.png" data-speed="-5" class="layer card" id="card">
+    </section>
 
-<div class="crossword-board-container">
-    <div class="crossword-board">
-        <div class="crossword-board crossword-board--labels">
-            <span id="label-1" class="crossword-board__item-label crossword-board__item-label--1"><span class="crossword-board__item-label-text">1</span></span>
-            <span id="label-2" class="crossword-board__item-label crossword-board__item-label--2"><span class="crossword-board__item-label-text">2</span></span>
-            <span id="label-3" class="crossword-board__item-label crossword-board__item-label--3"><span class="crossword-board__item-label-text">3</span></span>
-            <span id="label-4" class="crossword-board__item-label crossword-board__item-label--4"><span class="crossword-board__item-label-text">4</span></span>
-            <span id="label-5" class="crossword-board__item-label crossword-board__item-label--5"><span class="crossword-board__item-label-text">5</span></span>
-            <span id="label-6" class="crossword-board__item-label crossword-board__item-label--6"><span class="crossword-board__item-label-text">6</span></span>
-            <span id="label-7" class="crossword-board__item-label crossword-board__item-label--7"><span class="crossword-board__item-label-text">7</span></span>
-            <span id="label-8" class="crossword-board__item-label crossword-board__item-label--8"><span class="crossword-board__item-label-text">8</span></span>
-            <span id="label-8" class="crossword-board__item-label crossword-board__item-label--9"><span class="crossword-board__item-label-text">9</span></span>
-            <span id="label-8" class="crossword-board__item-label crossword-board__item-label--10"><span class="crossword-board__item-label-text">10</span></span>
+    <div id="overlay">
+        <div id="overlay-container" class="overlay-container">
+            <image src="ASSETS/interaktiv-logo.png" class="logo"></image>
+            <div class="congratulations-text text">Congratulations!</div>
+            <div class="message-text text">The secret code for the next portal is <b>'REQUIREMENTS'.</b> Go back to your journey and head over to the next station!</div>
+            <button class="menu-btn btn hide" id="menu-btn" onclick="window.location.href='https://interaktiv.benilde.edu.ph/?page_id=4171';">BACK TO MENU</button>
         </div>
-        
-        <!-- ROW 1 -->
-        <span class="crossword-board__item--blank" id="item1-1"></span>
-        <input id="item1-2" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
-        <input id="item1-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
-        <input id="item1-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[pP]{1}$" required="required" value="" />
-        <input id="item1-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
-        <input id="item1-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
-        <input id="item1-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[pP]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item1-8"></span>
-        <input id="item1-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[zZ]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item1-10"></span>
-        <span class="crossword-board__item--blank" id="item1-11"></span>
-        <span class="crossword-board__item--blank" id="item1-12"></span>
-        <span class="crossword-board__item--blank" id="item1-13"></span>
-        <span class="crossword-board__item--blank" id="item1-14"></span>
-        <!-- ROW 1 -->
-    
-        <!-- ROW 2 -->
-        <span class="crossword-board__item--blank" id="item2-1"></span>
-        <span class="crossword-board__item--blank" id="item2-2"></span>
-        <input id="item2-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item2-4"></span>
-        <span class="crossword-board__item--blank" id="item2-5"></span>
-        <span class="crossword-board__item--blank" id="item2-6"></span>
-        <span class="crossword-board__item--blank" id="item2-7"></span>
-        <span class="crossword-board__item--blank" id="item2-8"></span>
-        <input id="item2-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item2-10"></span>
-        <span class="crossword-board__item--blank" id="item2-11"></span>
-        <span class="crossword-board__item--blank" id="item2-12"></span>
-        <span class="crossword-board__item--blank" id="item2-13"></span>
-        <span class="crossword-board__item--blank" id="item2-14"></span>
-        <!-- ROW 2 -->
-    
-        <!-- ROW 3 -->
-        <span class="crossword-board__item--blank" id="item3-1"></span>
-        <span class="crossword-board__item--blank" id="item3-2"></span>
-        <input id="item3-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item3-4"></span>
-        <span class="crossword-board__item--blank" id="item3-5"></span>
-        <span class="crossword-board__item--blank" id="item3-6"></span>
-        <span class="crossword-board__item--blank" id="item3-7"></span>
-        <span class="crossword-board__item--blank" id="item3-8"></span>
-        <input id="item3-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item3-10"></span>
-        <span class="crossword-board__item--blank" id="item3-11"></span>
-        <span class="crossword-board__item--blank" id="item3-12"></span>
-        <span class="crossword-board__item--blank" id="item3-13"></span>
-        <span class="crossword-board__item--blank" id="item3-14"></span>
-        <!-- ROW 3 -->
-    
-        <!-- ROW 4 -->
-        <span class="crossword-board__item--blank" id="item4-1"></span>
-        <input id="item4-2" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[bB]{1}$" required="required" value="" />
-        <input id="item4-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
-        <input id="item4-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
-        <input id="item4-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
-        <input id="item4-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
-        <input id="item4-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[dD]{1}$" required="required" value="" />
-        <input id="item4-8" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
-        <input id="item4-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[mM]{1}$" required="required" value="" />
-        <input id="item4-10" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
-        <input id="item4-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
-        <input id="item4-12" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item4-13"></span>
-        <span class="crossword-board__item--blank" id="item4-14"></span>
-        <!-- ROW 4 -->
-    
-        <!-- ROW 5 -->
-        <span class="crossword-board__item--blank" id="item5-1"></span>
-        <span class="crossword-board__item--blank" id="item5-2"></span>
-        <input id="item5-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item5-4"></span>
-        <span class="crossword-board__item--blank" id="item5-5"></span>
-        <span class="crossword-board__item--blank" id="item5-6"></span>
-        <span class="crossword-board__item--blank" id="item5-7"></span>
-        <span class="crossword-board__item--blank" id="item5-8"></span>
-        <span class="crossword-board__item--blank" id="item5-9"></span>
-        <span class="crossword-board__item--blank" id="item5-10"></span>
-        <span class="crossword-board__item--blank" id="item5-11"></span>
-        <span class="crossword-board__item--blank" id="item5-12"></span>
-        <span class="crossword-board__item--blank" id="item5-13"></span>
-        <span class="crossword-board__item--blank" id="item5-14"></span>
-        <!-- ROW 5 -->
-    
-        <!-- ROW 6 -->
-        <span class="crossword-board__item--blank" id="item6-1"></span>
-        <span class="crossword-board__item--blank" id="item6-2"></span>
-        <input id="item6-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[dD]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item6-4"></span>
-        <input id="item6-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item6-6"></span>
-        <span class="crossword-board__item--blank" id="item6-7"></span>
-        <span class="crossword-board__item--blank" id="item6-8"></span>
-        <span class="crossword-board__item--blank" id="item6-9"></span>
-        <span class="crossword-board__item--blank" id="item6-10"></span>
-        <span class="crossword-board__item--blank" id="item6-11"></span>
-        <span class="crossword-board__item--blank" id="item6-12"></span>
-        <span class="crossword-board__item--blank" id="item6-13"></span>
-        <span class="crossword-board__item--blank" id="item6-14"></span>
-        <!-- ROW 6 -->
-    
-        <!-- ROW 7 -->
-        <span class="crossword-board__item--blank" id="item7-1"></span>
-        <span class="crossword-board__item--blank" id="item7-2"></span>
-        <input id="item7-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
-        <input id="item7-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
-        <input id="item7-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[yY]{1}$" required="required" value="" />
-        <input id="item7-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
-        <input id="item7-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[cC]{1}$" required="required" value="" />
-        <input id="item7-8" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[hH]{1}$" required="required" value="" />
-        <input id="item7-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[rR]{1}$" required="required" value="" />
-        <input id="item7-10" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
-        <input id="item7-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
-        <input id="item7-12" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
-        <input id="item7-13" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[uU]{1}$" required="required" value="" />
-        <input id="item7-14" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
-        <!-- ROW 7 -->
-    
-        <!-- ROW 8 -->
-        <span class="crossword-board__item--blank" id="item8-1"></span>
-        <span class="crossword-board__item--blank" id="item8-2"></span>
-        <input id="item8-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item8-4"></span>
-        <input id="item8-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item8-6"></span>
-        <span class="crossword-board__item--blank" id="item8-7"></span>
-        <span class="crossword-board__item--blank" id="item8-8"></span>
-        <span class="crossword-board__item--blank" id="item8-9"></span>
-        <span class="crossword-board__item--blank" id="item8-10"></span>
-        <input id="item8-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item8-12"></span>
-        <span class="crossword-board__item--blank" id="item8-13"></span>
-        <span class="crossword-board__item--blank" id="item8-14"></span>
-        <!-- ROW 8 -->
-    
-        <!-- ROW 9 -->
-        <span class="crossword-board__item--blank" id="item9-1"></span>
-        <span class="crossword-board__item--blank" id="item9-2"></span>
-        <input id="item9-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[cC]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item9-4"></span>
-        <input id="item9-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item9-6"></span>
-        <span class="crossword-board__item--blank" id="item9-7"></span>
-        <span class="crossword-board__item--blank" id="item9-8"></span>
-        <span class="crossword-board__item--blank" id="item9-9"></span>
-        <span class="crossword-board__item--blank" id="item9-10"></span>
-        <input id="item9-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item9-12"></span>
-        <span class="crossword-board__item--blank" id="item9-13"></span>
-        <span class="crossword-board__item--blank" id="item9-14"></span>
-        <!-- ROW 9 -->
-    
-        <!-- ROW 10 -->
-        <span class="crossword-board__item--blank" id="item10-1"></span>
-        <span class="crossword-board__item--blank" id="item10-2"></span>
-        <input id="item10-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item10-4"></span>
-        <input id="item10-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item10-6"></span>
-        <span class="crossword-board__item--blank" id="item10-7"></span>
-        <span class="crossword-board__item--blank" id="item10-8"></span>
-        <span class="crossword-board__item--blank" id="item10-9"></span>
-        <input id="item10-10" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
-        <input id="item10-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
-        <input id="item10-12" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[rR]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item10-13"></span>
-        <span class="crossword-board__item--blank" id="item10-14"></span>
-        <!-- ROW 10 -->
-    
-        <!-- ROW 11 -->
-        <span class="crossword-board__item--blank" id="item11-1"></span>
-        <span class="crossword-board__item--blank" id="item11-2"></span>
-        <span class="crossword-board__item--blank" id="item11-3"></span>
-        <span class="crossword-board__item--blank" id="item11-4"></span>
-        <input id="item11-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[bB]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item11-6"></span>
-        <span class="crossword-board__item--blank" id="item11-7"></span>
-        <span class="crossword-board__item--blank" id="item11-8"></span>
-        <span class="crossword-board__item--blank" id="item11-9"></span>
-        <span class="crossword-board__item--blank" id="item11-10"></span>
-        <input id="item11-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item11-12"></span>
-        <span class="crossword-board__item--blank" id="item11-13"></span>
-        <span class="crossword-board__item--blank" id="item11-14"></span>
-        <!-- ROW 11 -->
-    
-        <!-- ROW 12 -->
-        <span class="crossword-board__item--blank" id="item12-1"></span>
-        <span class="crossword-board__item--blank" id="item12-2"></span>
-        <input id="item12-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item12-4"></span>
-        <input id="item12-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[uU]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item12-6"></span>
-        <span class="crossword-board__item--blank" id="item12-7"></span>
-        <span class="crossword-board__item--blank" id="item12-8"></span>
-        <span class="crossword-board__item--blank" id="item12-9"></span>
-        <span class="crossword-board__item--blank" id="item12-10"></span>
-        <input id="item12-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[yY]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item12-12"></span>
-        <span class="crossword-board__item--blank" id="item12-13"></span>
-        <span class="crossword-board__item--blank" id="item12-14"></span>
-        <!-- ROW 12 -->
-    
-        <!-- ROW 13 -->
-        <span class="crossword-board__item--blank" id="item13-1"></span>
-        <input id="item13-2" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[bB]{1}$" required="required" value="" />
-        <input id="item13-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
-        <input id="item13-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[gG]{1}$" required="required" value="" />
-        <input id="item13-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
-        <input id="item13-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[kK]{1}$" required="required" value="" />
-        <input id="item13-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[yY]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item13-8"></span>
-        <span class="crossword-board__item--blank" id="item13-9"></span>
-        <span class="crossword-board__item--blank" id="item13-10"></span>
-        <span class="crossword-board__item--blank" id="item13-11"></span>
-        <span class="crossword-board__item--blank" id="item13-12"></span>
-        <span class="crossword-board__item--blank" id="item13-13"></span>
-        <span class="crossword-board__item--blank" id="item13-14"></span>
-        <!-- ROW 13 -->
-    
-        <!-- ROW 14 -->
-        <span class="crossword-board__item--blank" id="item14-1"></span>
-        <span class="crossword-board__item--blank" id="item14-2"></span>
-        <input id="item14-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
-        <span class="crossword-board__item--blank" id="item14-4"></span>
-        <span class="crossword-board__item--blank" id="item14-5"></span>
-        <span class="crossword-board__item--blank" id="item14-6"></span>
-        <span class="crossword-board__item--blank" id="item14-7"></span>
-        <span class="crossword-board__item--blank" id="item14-8"></span>
-        <span class="crossword-board__item--blank" id="item14-9"></span>
-        <span class="crossword-board__item--blank" id="item14-10"></span>
-        <span class="crossword-board__item--blank" id="item14-11"></span>
-        <span class="crossword-board__item--blank" id="item14-12"></span>
-        <span class="crossword-board__item--blank" id="item14-13"></span>
-        <span class="crossword-board__item--blank" id="item14-14"></span>
-        <!-- ROW 14 -->
     </div>
-</div>
 
-</br>
-<input type="image" id="checkValidItems" src="ASSETS/submit-button.png" width= 200px class="btn submit-btn" onclick="validateAnswer()"></button>
-</br>
-<img src="ASSETS/boards.png" class="boards" >
-</br>
-<input type="image" src="ASSETS/back-button.png" class="btn back-btn" width= 250px onclick="window.location.href='https://interaktiv.benilde.edu.ph/?page_id=2103';">
+    <img class="title" id="title" src="ASSETS/title-sign.png" width= 400px><img>
+    </br>
 
+    <div class="crossword-board-container" id="crossword-board-container">
+        <div class="crossword-board">
+            <div class="crossword-board crossword-board--labels">
+                <span id="label-1" class="crossword-board__item-label crossword-board__item-label--1"><span class="crossword-board__item-label-text">1</span></span>
+                <span id="label-2" class="crossword-board__item-label crossword-board__item-label--2"><span class="crossword-board__item-label-text">2</span></span>
+                <span id="label-3" class="crossword-board__item-label crossword-board__item-label--3"><span class="crossword-board__item-label-text">3</span></span>
+                <span id="label-4" class="crossword-board__item-label crossword-board__item-label--4"><span class="crossword-board__item-label-text">4</span></span>
+                <span id="label-5" class="crossword-board__item-label crossword-board__item-label--5"><span class="crossword-board__item-label-text">5</span></span>
+                <span id="label-6" class="crossword-board__item-label crossword-board__item-label--6"><span class="crossword-board__item-label-text">6</span></span>
+                <span id="label-7" class="crossword-board__item-label crossword-board__item-label--7"><span class="crossword-board__item-label-text">7</span></span>
+                <span id="label-8" class="crossword-board__item-label crossword-board__item-label--8"><span class="crossword-board__item-label-text">8</span></span>
+                <span id="label-8" class="crossword-board__item-label crossword-board__item-label--9"><span class="crossword-board__item-label-text">9</span></span>
+                <span id="label-8" class="crossword-board__item-label crossword-board__item-label--10"><span class="crossword-board__item-label-text">10</span></span>
+            </div>
+            
+            <!-- ROW 1 -->
+            <span class="crossword-board__item--blank" id="item1-1"></span>
+            <input id="item1-2" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
+            <input id="item1-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
+            <input id="item1-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[pP]{1}$" required="required" value="" />
+            <input id="item1-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
+            <input id="item1-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
+            <input id="item1-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[pP]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item1-8"></span>
+            <input id="item1-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[zZ]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item1-10"></span>
+            <span class="crossword-board__item--blank" id="item1-11"></span>
+            <span class="crossword-board__item--blank" id="item1-12"></span>
+            <span class="crossword-board__item--blank" id="item1-13"></span>
+            <span class="crossword-board__item--blank" id="item1-14"></span>
+            <!-- ROW 1 -->
+        
+            <!-- ROW 2 -->
+            <span class="crossword-board__item--blank" id="item2-1"></span>
+            <span class="crossword-board__item--blank" id="item2-2"></span>
+            <input id="item2-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item2-4"></span>
+            <span class="crossword-board__item--blank" id="item2-5"></span>
+            <span class="crossword-board__item--blank" id="item2-6"></span>
+            <span class="crossword-board__item--blank" id="item2-7"></span>
+            <span class="crossword-board__item--blank" id="item2-8"></span>
+            <input id="item2-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item2-10"></span>
+            <span class="crossword-board__item--blank" id="item2-11"></span>
+            <span class="crossword-board__item--blank" id="item2-12"></span>
+            <span class="crossword-board__item--blank" id="item2-13"></span>
+            <span class="crossword-board__item--blank" id="item2-14"></span>
+            <!-- ROW 2 -->
+        
+            <!-- ROW 3 -->
+            <span class="crossword-board__item--blank" id="item3-1"></span>
+            <span class="crossword-board__item--blank" id="item3-2"></span>
+            <input id="item3-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item3-4"></span>
+            <span class="crossword-board__item--blank" id="item3-5"></span>
+            <span class="crossword-board__item--blank" id="item3-6"></span>
+            <span class="crossword-board__item--blank" id="item3-7"></span>
+            <span class="crossword-board__item--blank" id="item3-8"></span>
+            <input id="item3-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item3-10"></span>
+            <span class="crossword-board__item--blank" id="item3-11"></span>
+            <span class="crossword-board__item--blank" id="item3-12"></span>
+            <span class="crossword-board__item--blank" id="item3-13"></span>
+            <span class="crossword-board__item--blank" id="item3-14"></span>
+            <!-- ROW 3 -->
+        
+            <!-- ROW 4 -->
+            <span class="crossword-board__item--blank" id="item4-1"></span>
+            <input id="item4-2" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[bB]{1}$" required="required" value="" />
+            <input id="item4-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
+            <input id="item4-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
+            <input id="item4-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
+            <input id="item4-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
+            <input id="item4-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[dD]{1}$" required="required" value="" />
+            <input id="item4-8" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
+            <input id="item4-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[mM]{1}$" required="required" value="" />
+            <input id="item4-10" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
+            <input id="item4-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
+            <input id="item4-12" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item4-13"></span>
+            <span class="crossword-board__item--blank" id="item4-14"></span>
+            <!-- ROW 4 -->
+        
+            <!-- ROW 5 -->
+            <span class="crossword-board__item--blank" id="item5-1"></span>
+            <span class="crossword-board__item--blank" id="item5-2"></span>
+            <input id="item5-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item5-4"></span>
+            <span class="crossword-board__item--blank" id="item5-5"></span>
+            <span class="crossword-board__item--blank" id="item5-6"></span>
+            <span class="crossword-board__item--blank" id="item5-7"></span>
+            <span class="crossword-board__item--blank" id="item5-8"></span>
+            <span class="crossword-board__item--blank" id="item5-9"></span>
+            <span class="crossword-board__item--blank" id="item5-10"></span>
+            <span class="crossword-board__item--blank" id="item5-11"></span>
+            <span class="crossword-board__item--blank" id="item5-12"></span>
+            <span class="crossword-board__item--blank" id="item5-13"></span>
+            <span class="crossword-board__item--blank" id="item5-14"></span>
+            <!-- ROW 5 -->
+        
+            <!-- ROW 6 -->
+            <span class="crossword-board__item--blank" id="item6-1"></span>
+            <span class="crossword-board__item--blank" id="item6-2"></span>
+            <input id="item6-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[dD]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item6-4"></span>
+            <input id="item6-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item6-6"></span>
+            <span class="crossword-board__item--blank" id="item6-7"></span>
+            <span class="crossword-board__item--blank" id="item6-8"></span>
+            <span class="crossword-board__item--blank" id="item6-9"></span>
+            <span class="crossword-board__item--blank" id="item6-10"></span>
+            <span class="crossword-board__item--blank" id="item6-11"></span>
+            <span class="crossword-board__item--blank" id="item6-12"></span>
+            <span class="crossword-board__item--blank" id="item6-13"></span>
+            <span class="crossword-board__item--blank" id="item6-14"></span>
+            <!-- ROW 6 -->
+        
+            <!-- ROW 7 -->
+            <span class="crossword-board__item--blank" id="item7-1"></span>
+            <span class="crossword-board__item--blank" id="item7-2"></span>
+            <input id="item7-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
+            <input id="item7-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
+            <input id="item7-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[yY]{1}$" required="required" value="" />
+            <input id="item7-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
+            <input id="item7-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[cC]{1}$" required="required" value="" />
+            <input id="item7-8" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[hH]{1}$" required="required" value="" />
+            <input id="item7-9" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[rR]{1}$" required="required" value="" />
+            <input id="item7-10" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
+            <input id="item7-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
+            <input id="item7-12" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[oO]{1}$" required="required" value="" />
+            <input id="item7-13" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[uU]{1}$" required="required" value="" />
+            <input id="item7-14" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
+            <!-- ROW 7 -->
+        
+            <!-- ROW 8 -->
+            <span class="crossword-board__item--blank" id="item8-1"></span>
+            <span class="crossword-board__item--blank" id="item8-2"></span>
+            <input id="item8-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item8-4"></span>
+            <input id="item8-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item8-6"></span>
+            <span class="crossword-board__item--blank" id="item8-7"></span>
+            <span class="crossword-board__item--blank" id="item8-8"></span>
+            <span class="crossword-board__item--blank" id="item8-9"></span>
+            <span class="crossword-board__item--blank" id="item8-10"></span>
+            <input id="item8-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item8-12"></span>
+            <span class="crossword-board__item--blank" id="item8-13"></span>
+            <span class="crossword-board__item--blank" id="item8-14"></span>
+            <!-- ROW 8 -->
+        
+            <!-- ROW 9 -->
+            <span class="crossword-board__item--blank" id="item9-1"></span>
+            <span class="crossword-board__item--blank" id="item9-2"></span>
+            <input id="item9-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[cC]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item9-4"></span>
+            <input id="item9-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[lL]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item9-6"></span>
+            <span class="crossword-board__item--blank" id="item9-7"></span>
+            <span class="crossword-board__item--blank" id="item9-8"></span>
+            <span class="crossword-board__item--blank" id="item9-9"></span>
+            <span class="crossword-board__item--blank" id="item9-10"></span>
+            <input id="item9-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[nN]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item9-12"></span>
+            <span class="crossword-board__item--blank" id="item9-13"></span>
+            <span class="crossword-board__item--blank" id="item9-14"></span>
+            <!-- ROW 9 -->
+        
+            <!-- ROW 10 -->
+            <span class="crossword-board__item--blank" id="item10-1"></span>
+            <span class="crossword-board__item--blank" id="item10-2"></span>
+            <input id="item10-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item10-4"></span>
+            <input id="item10-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[aA]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item10-6"></span>
+            <span class="crossword-board__item--blank" id="item10-7"></span>
+            <span class="crossword-board__item--blank" id="item10-8"></span>
+            <span class="crossword-board__item--blank" id="item10-9"></span>
+            <input id="item10-10" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
+            <input id="item10-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[eE]{1}$" required="required" value="" />
+            <input id="item10-12" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[rR]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item10-13"></span>
+            <span class="crossword-board__item--blank" id="item10-14"></span>
+            <!-- ROW 10 -->
+        
+            <!-- ROW 11 -->
+            <span class="crossword-board__item--blank" id="item11-1"></span>
+            <span class="crossword-board__item--blank" id="item11-2"></span>
+            <span class="crossword-board__item--blank" id="item11-3"></span>
+            <span class="crossword-board__item--blank" id="item11-4"></span>
+            <input id="item11-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[bB]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item11-6"></span>
+            <span class="crossword-board__item--blank" id="item11-7"></span>
+            <span class="crossword-board__item--blank" id="item11-8"></span>
+            <span class="crossword-board__item--blank" id="item11-9"></span>
+            <span class="crossword-board__item--blank" id="item11-10"></span>
+            <input id="item11-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[tT]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item11-12"></span>
+            <span class="crossword-board__item--blank" id="item11-13"></span>
+            <span class="crossword-board__item--blank" id="item11-14"></span>
+            <!-- ROW 11 -->
+        
+            <!-- ROW 12 -->
+            <span class="crossword-board__item--blank" id="item12-1"></span>
+            <span class="crossword-board__item--blank" id="item12-2"></span>
+            <input id="item12-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item12-4"></span>
+            <input id="item12-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[uU]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item12-6"></span>
+            <span class="crossword-board__item--blank" id="item12-7"></span>
+            <span class="crossword-board__item--blank" id="item12-8"></span>
+            <span class="crossword-board__item--blank" id="item12-9"></span>
+            <span class="crossword-board__item--blank" id="item12-10"></span>
+            <input id="item12-11" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[yY]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item12-12"></span>
+            <span class="crossword-board__item--blank" id="item12-13"></span>
+            <span class="crossword-board__item--blank" id="item12-14"></span>
+            <!-- ROW 12 -->
+        
+            <!-- ROW 13 -->
+            <span class="crossword-board__item--blank" id="item13-1"></span>
+            <input id="item13-2" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[bB]{1}$" required="required" value="" />
+            <input id="item13-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
+            <input id="item13-4" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[gG]{1}$" required="required" value="" />
+            <input id="item13-5" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[sS]{1}$" required="required" value="" />
+            <input id="item13-6" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[kK]{1}$" required="required" value="" />
+            <input id="item13-7" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[yY]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item13-8"></span>
+            <span class="crossword-board__item--blank" id="item13-9"></span>
+            <span class="crossword-board__item--blank" id="item13-10"></span>
+            <span class="crossword-board__item--blank" id="item13-11"></span>
+            <span class="crossword-board__item--blank" id="item13-12"></span>
+            <span class="crossword-board__item--blank" id="item13-13"></span>
+            <span class="crossword-board__item--blank" id="item13-14"></span>
+            <!-- ROW 13 -->
+        
+            <!-- ROW 14 -->
+            <span class="crossword-board__item--blank" id="item14-1"></span>
+            <span class="crossword-board__item--blank" id="item14-2"></span>
+            <input id="item14-3" class="crossword-board__item" type="text" minlength="1" maxlength="1" pattern="^[iI]{1}$" required="required" value="" />
+            <span class="crossword-board__item--blank" id="item14-4"></span>
+            <span class="crossword-board__item--blank" id="item14-5"></span>
+            <span class="crossword-board__item--blank" id="item14-6"></span>
+            <span class="crossword-board__item--blank" id="item14-7"></span>
+            <span class="crossword-board__item--blank" id="item14-8"></span>
+            <span class="crossword-board__item--blank" id="item14-9"></span>
+            <span class="crossword-board__item--blank" id="item14-10"></span>
+            <span class="crossword-board__item--blank" id="item14-11"></span>
+            <span class="crossword-board__item--blank" id="item14-12"></span>
+            <span class="crossword-board__item--blank" id="item14-13"></span>
+            <span class="crossword-board__item--blank" id="item14-14"></span>
+            <!-- ROW 14 -->
+        </div>
+    </div>
+    <div class="bottom-elements" id="bottom-elements">
+        </br>
+        <input type="image" id="checkValidItems" src="ASSETS/submit-button.png" width= 200px class="btn submit-btn" id="submit-button submit-btn" onclick="validateAnswer()"></button>
+        </br>
+        <img src="ASSETS/boards.png" class="boards" id="boards">
+    </div>
+</body>
