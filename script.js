@@ -5,13 +5,25 @@ winSound.src = "SOUNDs/victory.wav"
 var backgroundMusic = new Audio();
 backgroundMusic.src = "SOUNDS/happy.mp3"
 
+var wrongSound = new Audio
+wrongSound.src = "SOUNDS/wrong.mp3"
+
 function startGame() {
     document.getElementById("parallax").style.display = "none"
     document.getElementById("title").style.display = "block"
     document.getElementById("crossword-board-container").style.display = "block"
-    document.getElementById("bottom-elements").style.display = "block"
+    document.getElementById("boards").style.display = "block"
     backgroundMusic.play()
     backgroundMusic.volume = 0.1
+}
+
+function moveTextBox(fromCurrentBox, toNextBox){
+    var length = fromCurrentBox.value.length
+    var maxLength = fromCurrentBox.getAttribute("maxlength")
+
+    if (length == maxLength){
+        document.getElementById(toNextBox).focus()
+    }
 }
 
 function validateAnswer() {
@@ -123,9 +135,10 @@ function validateAnswer() {
         winSound.play()
         document.getElementById("title").style.display = "none"
         document.getElementById("crossword-board-container").style.display = "none"
-        document.getElementById("bottom-elements").style.display = "none"
+        document.getElementById("boards").style.display = "none"
         document.getElementById("overlay").style.display = "block"
     } else {
-        alert("Please Try Again! Seems like some of your answers are wrong.");
+        wrongSound.play()
+        document.getElementById('alert').style.display = 'block'
     };
 }
