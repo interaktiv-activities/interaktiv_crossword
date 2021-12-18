@@ -14,7 +14,7 @@ function startGame() {
     document.getElementById("crossword-board-container").style.display = "block"
     document.getElementById("boards").style.display = "block"
     backgroundMusic.play()
-    backgroundMusic.volume = 0.1
+    backgroundMusic.volume = 0.05
 }
 
 function moveTextBox(fromCurrentBox, toNextBox){
@@ -132,12 +132,14 @@ function validateAnswer() {
     (x59 == "S" || x59 == "s") && (x60 == "S" || x60 == "s")
     ){
         backgroundMusic.volume = 0
+        winSound.volume = .1
         winSound.play()
         document.getElementById("title").style.display = "none"
         document.getElementById("crossword-board-container").style.display = "none"
         document.getElementById("boards").style.display = "none"
         document.getElementById("overlay").style.display = "block"
     } else {
+        wrongSound.volume = .1
         wrongSound.play()
         document.getElementById('alert').style.display = 'block'
     };
